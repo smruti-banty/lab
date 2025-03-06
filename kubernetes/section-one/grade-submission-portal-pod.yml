@@ -3,7 +3,9 @@ kind: Pod
 metadata:
   name: grade-submission-portal
   labels:
-    name: grade-submission-portal
+    app.kubernetes.io/name: grade-submission
+    app.kubernetes.io/component: frontend
+    app.kubernetes.io/instance: grade-submission-portal
 spec:
   containers:
   - name: grade-submission-portal
