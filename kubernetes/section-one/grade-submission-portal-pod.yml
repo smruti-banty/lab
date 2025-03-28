@@ -9,10 +9,13 @@ metadata:
 spec:
   containers:
   - name: grade-submission-portal
-    image: <Image>
+    image: mysql
     resources:
       limits:
-        memory: "128Mi"
+        memory: "512Mi"
         cpu: "500m"
     ports:
-      - containerPort: <Port>
+      - containerPort: 3306
+    env: 
+      - name: MYSQL_ROOT_PASSWORD
+        value: "root"
